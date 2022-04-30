@@ -2,10 +2,10 @@ document.getElementById("app").innerHTML = `
 <h1>Calculadora</h1>
 
 <h3>ingrese el primer numero</h3>
-<input id="numA"> </input>
+  <input id="numA"> </input>
 
 <h3>ingrese segundo numero</h3>
-<input id="numB"> </input>
+  <input id="numB"> </input>
 
 <br>
 
@@ -16,6 +16,7 @@ document.getElementById("app").innerHTML = `
         <option value="4">Division</option>
         <option value="5">Raiz</option>
         <option value="6">Potencia</option>
+        <option value="7">Porcentaje</option>
 </select>
 
 <button id="calculo"> Calcular </button>
@@ -23,8 +24,6 @@ document.getElementById("app").innerHTML = `
 
 let calcular = document.getElementById("calculo");
 let decision: number = Number(operacion.value);
-
-console.log(decision);
 
 calcular.addEventListener("click", () => {
   let num1: number = Number(numA.value);
@@ -40,6 +39,9 @@ calcular.addEventListener("click", () => {
   else if (decision === 2) let resultado = num1 - num2;
   else if (decision === 3) let resultado = num1 * num2;
   else if (decision === 4) let resultado = num1 / num2;
+  else if (decision === 5) let resultado = num1 ** (1 / num2);
+  else if (decision === 6) let resultado = num1 ** num2;
+  else if (decision === 7) let resultado = (num1 * num2) / 100;
 
   console.log(resultado);
 });
