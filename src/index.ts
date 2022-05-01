@@ -13,16 +13,15 @@ document.getElementById("app").innerHTML = `
 `;
 
 let irTrabajo = document.getElementById("ir");
-let decision: number = Number(menuTarea.value);
+let decision: number;
 
 irTrabajo.addEventListener("click", () => {
-  document.getElementById("menu").innerHTML = `
+  let decision: number = Number(menuTarea.value);
 
-
-
-
-    `;
+  if (decision === 1) {
+    document.getElementById("menu").src = "/ejerciciosProg/calculadora.ts";
+  }
 });
 
-//este archivo puede usarse para gestionar el archivo html como menu
+//este archivo es para usarse para gestionar el archivo html como menu
 //y dar acceso a las multiples tareas, pruebas y ejercicios.
